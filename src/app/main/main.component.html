@@ -1,0 +1,69 @@
+<section class="py-1 bg-blueGray-50 h-screen bg-gradient-to-tl from-[#FFE6FA] to-[#E3FDF5]">
+    <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+
+            <div class="block w-full overflow-x-auto">
+                <table class="items-center bg-transparent w-full border-collapse ">
+                    <thead>
+                        <tr class="bg-black text-white">
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                ID
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                UserName
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                mobileNumber
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                Terms & Condition
+                            </th>
+                            <th
+                                class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let user of user,index as i " class="hover:bg-gray-100 text-justify border border-gray-100 text-4xl">
+                            <th
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 text-left text-blueGray-700 ">
+                                {{i+1}}
+                            </th>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 capitalize">
+                                {{user.userName}}
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-center border-l-0 border-r-0 text-sm whitespace-nowrap p-4">
+                                {{user.mobileNumber}}
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-sm whitespace-nowrap p-4 capitalize">
+                                {{user.accept}}
+                            </td>
+                            <td
+                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 flex gap-2">
+                                <button
+                                  mat-raised-button color="warn" class=" px-2 py-1 rounded-sm hover:translate-y-[1px] border-0" (click)="deleteUser(i)">Delete</button>
+                                <button
+                                  mat-button  class=" !text-white px-2 py-1 rounded-sm hover:translate-y-[1px] border-0 !bg-indigo-600"  routerLink="/editUser/{{i+1}}" (click)="editUser()">Edit</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <button mat-raised-button class="!bg-violet-600 !text-white shadow-lg" (click)="addUser()">AddUser</button>
+        </div>
+    </div>
+
+</section>
+
+
