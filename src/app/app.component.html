@@ -1,9 +1,21 @@
-<header class="bg-[#AA2EE6] justify-center xl:justify-start  gap-8 py-4 xl:ps-36">
-    <button mat-button [routerLink]="['adduser']" class="hover:underline  !text-white   text-[18px] ">Add User</button>
-    <button mat-button [routerLink]="['user']" class="hover:underline  !text-white   text-[18px] ">All User</button>
+<header class="bg-black py-6 px-4 ">
+    <div class="container mx-auto flex items-center lg:justify-end gap-4">
+        <button mat-button [routerLink]="['user']"
+            class="!bg-white !min-w-[120px] !rounded-lg !h-10 hover:!bg-white  !text-black   text-base font-medium ">All
+            User
+        </button>
+        <button mat-button [routerLink]="['adduser']"
+            class="!bg-white  !min-w-[120px] !rounded-lg !h-10 hover:!bg-white !text-black   text-base font-medium inline-flex items-center flex-row-reverse ">Add
+            User <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"
+                class="!ms-1 !me-0"></mat-icon>
+        </button>
+
+
+    </div>
 </header>
 <router-outlet></router-outlet>
 
-<footer class="bg-purple-600 text-center">
-    <p class="py-4">All Rights received Designed & developed by <a href="#" class="text-white font-medium underline">Karthii</a> </p>
+<footer class="bg-black text-white text-center">
+    <p class="py-4">2024 {{title}} Designed & developed by <a href="#"
+            class="text-white text-sm font-medium ms-1 ">Karthik</a> </p>
 </footer>

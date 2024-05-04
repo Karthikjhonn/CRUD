@@ -12,9 +12,11 @@ export class FormComponent {
 
   constructor(private router: Router, private service: HostservicesService, private activeRoute: ActivatedRoute) {
     if (router.url == "/adduser") {
-      this.title = "ADD USER"
+      this.title = "CRUD"
+      this.btnTitle = 'add user'
     } else if (router.url.split("/")[1] == "editUser") {
       this.title = "EDIT USER"
+      this.btnTitle = 'update user'
     }
     this.userId = this.activeRoute.snapshot.paramMap.get('id')
     service.getUserId(this.userId)
@@ -33,7 +35,8 @@ export class FormComponent {
   // ngOnDestroy(){console.log("destroy")}  
 
 
-  title = "ADD USER"
+  title = "CRUD"
+  btnTitle = 'Add User'
   userId !: any
   singleUser: any
 

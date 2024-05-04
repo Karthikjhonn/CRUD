@@ -8,7 +8,7 @@ import { MainComponent } from './main/main.component';
 import { FormComponent } from './form/form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatIconModule} from '@angular/material/icon'
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,9 +4,9 @@ import { MainComponent } from './main/main.component';
 import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
-  { path: 'adduser', component: FormComponent},
-  { path: 'user', component:MainComponent  },
-  { path: 'editUser/:id', component:FormComponent},
+  { path: 'adduser', component: FormComponent },
+  { path: 'user', component: MainComponent },
+  { path: 'editUser/:id', component: FormComponent },
   { path: '', redirectTo: 'adduser', pathMatch: 'full' }
 ];
 
